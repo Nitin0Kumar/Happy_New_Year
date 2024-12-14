@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+ 
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 100%, 50%, 1);
+    background: linear-gradient(0deg, hsla(0, 100%, 50%, 1) 0%, hsla(271, 64%, 47%, 1) 50%, hsla(58, 100%, 52%, 1) 100%);
+    background: -moz-linear-gradient(0deg, hsla(0, 100%, 50%, 1) 0%, hsla(271, 64%, 47%, 1) 50%, hsla(58, 100%, 52%, 1) 100%);
+    background: -webkit-linear-gradient(0deg, hsla(0, 100%, 50%, 1) 0%, hsla(271, 64%, 47%, 1) 50%, hsla(58, 100%, 52%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0000", endColorstr="#7B2BC6", GradientType=1 );
+  }
+  @font-face {
+    font-family: 'CustomFont'; 
+    src: url('clockicons.ttf'); 
+  }
+
+  .box {
+    background-color: #fefefe;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .box1 {
+    grid-row:  1/ span 2; 
+    grid-column: 2; 
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: hsla(0, 100%, 73%, 1);
+
+background: linear-gradient(225deg, hsla(0, 100%, 73%, 1) 0%, hsla(50, 100%, 59%, 1) 18%, hsla(121, 100%, 76%, 1) 38%, hsla(206, 100%, 80%, 1) 59%, hsla(311, 100%, 91%, 1) 82%, hsla(0, 0%, 61%, 1) 100%);
+
+background: -moz-linear-gradient(225deg, hsla(0, 100%, 73%, 1) 0%, hsla(50, 100%, 59%, 1) 18%, hsla(121, 100%, 76%, 1) 38%, hsla(206, 100%, 80%, 1) 59%, hsla(311, 100%, 91%, 1) 82%, hsla(0, 0%, 61%, 1) 100%);
+
+background: -webkit-linear-gradient(225deg, hsla(0, 100%, 73%, 1) 0%, hsla(50, 100%, 59%, 1) 18%, hsla(121, 100%, 76%, 1) 38%, hsla(206, 100%, 80%, 1) 59%, hsla(311, 100%, 91%, 1) 82%, hsla(0, 0%, 61%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF7373", endColorstr="#FFDC2E", GradientType=1 );
+  }
+
+
+  .box2 {
+    grid-row: 2;
+    grid-column: 1; 
+    border-radius: 0px 0px 100px 100px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    background-image: url('https://images.pexels.com/photos/774531/pexels-photo-774531.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+  }
+
+  .box3 {
+    grid-row: 1; 
+    grid-column: 1; 
+    border-radius: 100px 100px 0px 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+    position: relative;
+    background-image: url("https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-size: cover;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+  #previewButton:hover {
+    background: #21a1f1;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #imag{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: rgb(123, 0, 255);
+    overflow: hidden;
+  }
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  #timer {
+    font-size: 4rem;
+    margin: 10px 0;
+    font-family: 'CustomFont',sans-serif;
+    color: #ffffff;
+  }
+  #previewButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #61dafb;
+    color: black;
+    cursor: pointer;
+  }
+  #self{
+    width: fit-content;
+    height: 300px;
+    background: hsla(50, 87%, 76%, 1);
+    background: linear-gradient(180deg, hsla(50, 87%, 76%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(50, 87%, 76%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(50, 87%, 76%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7E68D", endColorstr="#FFFFFF", GradientType=1 );
+    margin: 50px;
+    padding: 40px;
+    border-radius: 30%;
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 10px;
+    opacity: 0.8;
+    user-select: none;
+    pointer-events: none;
+    }
+
+    #video-background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 100;
+    }
